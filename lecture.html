@@ -1,0 +1,93 @@
+<h1>Git Lecture Notes</h1>
+<h2>Topics Discussed</h2>
+<ul>
+<li>SSH, public key authentication.</li>
+<li>Version Control</li>
+<li>Git Basics</li>
+<li>Git Workflow</li>
+<li>Github</li>
+<li>Extra git commands</li>
+<li>Git GUI's</li>
+</ul>
+<h2>SSH</h2>
+<h3>Installing ssh</h3>
+<p><code>sudo apt-get install openssh</code></p>
+<h3>Connecting to server</h3>
+<p><code>$ ssh username@hostname</code></p>
+<h3>Public key authentication</h3>
+<p><code>ssh-keygen -t rsa</code> The private key is at <code>~/.ssh/id_rsa</code> while the private key is at <code>~/.ssh/id_rsa.pub</code> The server needs your public key to authenticate the connection.</p>
+<h2>Version Control</h2>
+<ul>
+<li>central VCS v/s Distributed VCS</li>
+<li>Why Version Control</li>
+<li>Helps remember history of project</li>
+<li>Move back and forth in history</li>
+<li>Any break in code can be fixed easily</li>
+<li>Any bugs introduced can be traced back to the code that made it</li>
+<li>Examples : svn, cvs, mercurial, bzr, etc</li>
+</ul>
+<h2>Git Basics</h2>
+<p>This is just a simple walkthrough. You are encouraged to try out these steps on your own.</p>
+<ul>
+<li><code>git init</code> creates a new repository</li>
+<li><code>git add &lt;filename&gt;</code> adds files to index</li>
+<li><code>git add .</code> adds everything to index</li>
+<li><code>git commit</code> creates a commit</li>
+<li><code>git commit -a</code> adds all <em>modified</em> files to the index and starts a commit</li>
+<li>A blank commit message aborts the commit</li>
+<li><code>git checkout &lt;??&gt;</code> changes your working directory to a commit/tag/branch</li>
+<li><code>git checkout -b branchname</code> creates a new branch and shifts to it</li>
+<li><code>git branch</code> shows a list of all branches &amp; the current branch</li>
+<li><code>git merge branchname</code> merges the branch with the current branch</li>
+<li><code>git tag</code> marks a tag for the current commit</li>
+</ul>
+<h2>Little of git-jargon</h2>
+<p>Read more over <a href="http://book.git-scm.com/7_glossary.html">here</a></p>
+<ul>
+<li><code>branch</code> is an active line of development.</li>
+<li><code>commit</code> is a snapshot of the working directory</li>
+<li><code>tag</code> is an alias of a particular commit</li>
+<li><code>HEAD</code> is a pointer to the current checked out branch</li>
+<li><code>tree</code> is the internal representation of working directory in git</li>
+<li><code>blob</code> is the internal representation of files in git</li>
+<li><code>index</code> is a staging area for the commit in progress</li>
+</ul>
+<h2>Git workflow</h2>
+<p>Mainly from <a href="http://nvie.com/posts/a-successful-git-branching-model/">here</a><br />Topics include branches, stable, hotfix, release, development, feature branch etc.</p>
+<h2>Github</h2>
+<ul>
+<li><a href="http://github.com">http://github.com</a> is an awesome site that allows people to share code, projects and colloborate easily using git.</li>
+<li>Create an account</li>
+<li>Setting up ssh-keys</li>
+<li>Creating repository</li>
+<li>Setting <code>remotes</code></li>
+<li><code>push</code>, <code>pull</code>, <code>fetch</code>, <code>merge</code></li>
+<li>Github gem</li>
+</ul>
+<h2>Some other things</h2>
+<ul>
+<li><code>git log</code> allows you to see your history</li>
+<li><code>git log --oneline</code> gives single line history</li>
+<li><code>git log --pretty</code> gives better output</li>
+<li><code>git log --graph</code> shows your commit graph</li>
+<li>Git GUI Systems - <code>gitg</code>, <code>git-cola</code>, <code>qgit</code>, <code>giggle</code> and the windows git-gui as well.</li>
+<li><code>.gitignore</code> file to store system specific stuff (configuration, databases, temp files, cache, build)</li>
+</ul>
+<h2>Redmine</h2>
+<ul>
+<li>Create user accounts</li>
+<li><code>git config user.name</code> and <code>git config user.email</code> should be setup</li>
+<li>Pass along the public keys (via email)</li>
+</ul>
+<h1>Resources on Git</h1>
+<ul>
+<li><a href="http://www.kernel.org/pub/software/scm/git/docs/everyday.html">Everyday GIT With 20 Commands Or So</a></li>
+<li><a href="http://progit.org/book/">Pro Git Book</a></li>
+<li><a href="http://gitref.org/">Git Reference</a></li>
+<li><a href="http://www.kernel.org/pub/software/scm/git/docs/gittutorial.html">Git Tutorial</a></li>
+<li><a href="http://book.git-scm.com/">Git Community Book</a></li>
+<li><a href="http://www.ralfebert.de/tutorials/git/">Another git tutorial</a></li>
+<li><a href="http://sixrevisions.com/resources/git-tutorials-beginners/">Git beginner tutes</a></li>
+<li><a href="http://eagain.net/articles/git-for-computer-scientists/">Git for Computer Scientists</a></li>
+<li><a href="http://ftp.newartisans.com/pub/git.from.bottom.up.pdf">Git from bottom up</a></li>
+</ul>
