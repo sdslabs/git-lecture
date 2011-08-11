@@ -81,6 +81,32 @@ Topics include branches, stable, hotfix, release, development, feature branch et
 - `git config user.name` and `git config user.email` should be setup
 - Pass along the public keys (via email)
 
+##Commit Messages Editing
+When you make commits on git, it uses your default text editors to type the commit message. This is set to `vim` in Windows and Linux. Linux folks can change it to anything else by setting the $EDITOR variable by the following command:
+`export EDITOR=nano` (Replace nano with the editor of your choice like gedit geany etc)
+
+You can also save the setting in your git global configuration, by :
+`git config --global core.editor "nano"`
+
+As per [this question on SO](http://stackoverflow.com/questions/10564/how-can-i-set-up-an-editor-to-work-with-git-on-windows), you can use Notepad++, or notepad etc on git on Windows as well.
+
+`git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"` 
+
+Take care about the slashes, and the path to your editor of choice. Don't use notepad, it screws with the newlines.
+
+###Vim
+If you're stuck with vim for some reason, do the following in the commit window
+1. Press `i` to go to insert mode
+1. Type your commit message
+1. Press `Esc`
+1. Type `:wq`. The colon is important
+1. Press `Enter`
+1. That's it, your commit should be successful
+
+Remember, an empty commit message aborts the commit. Also the best way to commit easily is:
+
+`git commit -m "Commit Message Here"` to just type the commit message on the command line, and leave out all the hassle of the editor
+
 #Resources on Git
 * [Git Cheat Sheets & Excellent starting guide](http://help.github.com/git-cheat-sheets/)
 * [Everyday GIT With 20 Commands Or So](http://www.kernel.org/pub/software/scm/git/docs/everyday.html)
@@ -92,3 +118,5 @@ Topics include branches, stable, hotfix, release, development, feature branch et
 * [Git beginner tutes](http://sixrevisions.com/resources/git-tutorials-beginners/)
 * [Git for Computer Scientists](http://eagain.net/articles/git-for-computer-scientists/) 
 * [Git from bottom up](http://ftp.newartisans.com/pub/git.from.bottom.up.pdf)
+* <http://learn.github.com/p/intro.html> - contains video tutorials on how to use git.
+* There is this book : Pragmatic Version Control , Using Git. you could download it from <library.nu>
