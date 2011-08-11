@@ -79,8 +79,19 @@
 <li><code>git config user.name</code> and <code>git config user.email</code> should be setup</li>
 <li>Pass along the public keys (via email)</li>
 </ul>
+<h2>Commit Messages Editing</h2>
+<p>When you make commits on git, it uses your default text editors to type the commit message. This is set to <code>vim</code> in Windows and Linux. Linux folks can change it to anything else by setting the $EDITOR variable by the following command: <code>export EDITOR=nano</code> (Replace nano with the editor of your choice like gedit geany etc)</p>
+<p>You can also save the setting in your git global configuration, by : <code>git config --global core.editor &quot;nano&quot;</code></p>
+<p>As per <a href="http://stackoverflow.com/questions/10564/how-can-i-set-up-an-editor-to-work-with-git-on-windows">this question on SO</a>, you can use Notepad++, or notepad etc on git on Windows as well.</p>
+<p><code>git config --global core.editor &quot;'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin&quot;</code></p>
+<p>Take care about the slashes, and the path to your editor of choice. Don't use notepad, it screws with the newlines.</p>
+<h3>Vim</h3>
+<p>If you're stuck with vim for some reason, do the following in the commit window 1. Press <code>i</code> to go to insert mode 1. Type your commit message 1. Press <code>Esc</code> 1. Type <code>:wq</code>. The colon is important 1. Press <code>Enter</code> 1. That's it, your commit should be successful</p>
+<p>Remember, an empty commit message aborts the commit. Also the best way to commit easily is:</p>
+<p><code>git commit -m &quot;Commit Message Here&quot;</code> to just type the commit message on the command line, and leave out all the hassle of the editor</p>
 <h1>Resources on Git</h1>
 <ul>
+<li><a href="http://help.github.com/git-cheat-sheets/">Git Cheat Sheets &amp; Excellent starting guide</a></li>
 <li><a href="http://www.kernel.org/pub/software/scm/git/docs/everyday.html">Everyday GIT With 20 Commands Or So</a></li>
 <li><a href="http://progit.org/book/">Pro Git Book</a></li>
 <li><a href="http://gitref.org/">Git Reference</a></li>
@@ -90,4 +101,6 @@
 <li><a href="http://sixrevisions.com/resources/git-tutorials-beginners/">Git beginner tutes</a></li>
 <li><a href="http://eagain.net/articles/git-for-computer-scientists/">Git for Computer Scientists</a></li>
 <li><a href="http://ftp.newartisans.com/pub/git.from.bottom.up.pdf">Git from bottom up</a></li>
+<li><a href="http://learn.github.com/p/intro.html">http://learn.github.com/p/intro.html</a> - contains video tutorials on how to use git.</li>
+<li>There is this book : Pragmatic Version Control , Using Git. you could download it from <library.nu></li>
 </ul>
