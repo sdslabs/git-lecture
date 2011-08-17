@@ -13,8 +13,10 @@
 
 ###Installing ssh
 `sudo apt-get install openssh`
+
 ###Connecting to server
 `$ ssh username@hostname`
+
 ###Public key authentication
 `ssh-keygen -t rsa`
 The private key is at `~/.ssh/id_rsa` while the private key is at `~/.ssh/id_rsa.pub`
@@ -67,6 +69,7 @@ Topics include branches, stable, hotfix, release, development, feature branch et
 - Setting `remotes`
 - `push`, `pull`, `fetch`, `merge`
 - Github gem
+- Online Editing as well (press `e` on a file)
 
 ##Some other things
 - `git log` allows you to see your history
@@ -80,6 +83,7 @@ Topics include branches, stable, hotfix, release, development, feature branch et
 - Create user accounts
 - `git config user.name` and `git config user.email` should be setup
 - Pass along the public keys (via email)
+- 
 
 ##Commit Messages Editing
 When you make commits on git, it uses your default text editors to type the commit message. This is set to `vim` in Windows and Linux. Linux folks can change it to anything else by setting the $EDITOR variable by the following command:
