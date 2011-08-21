@@ -1,4 +1,4 @@
-M#Git Lecture Notes
+#Git Lecture Notes
 
 ##Topics Discussed
 * SSH, public key authentication.
@@ -110,6 +110,7 @@ Take care about the slashes, and the path to your editor of choice. Don't use no
 
 ###Vim
 If you're stuck with vim for some reason, do the following in the commit window
+
 1. Press `i` to go to insert mode
 1. Type your commit message
 1. Press `Esc`
