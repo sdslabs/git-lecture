@@ -1,4 +1,4 @@
-#Git Lecture Notes
+M#Git Lecture Notes
 
 ##Topics Discussed
 * SSH, public key authentication.
@@ -57,9 +57,19 @@ Read more over [here](http://book.git-scm.com/7_glossary.html)
 - `blob` is the internal representation of files in git
 - `index` is a staging area for the commit in progress
 
-##Git workflow
+##Git Workflow
+
+###Fork, Merge, Pull
+This is what Github follows. People create their own fork version of the repo, and send back pull requests
+
+###Shared Repository
+A single repository shared among various people can be used successfully if the project is closed, and has known developers
+This is mainly for [organizations](github.com/sdslabs)
+
+###Branching Model
 Mainly from [here](http://nvie.com/posts/a-successful-git-branching-model/)  
 Topics include branches, stable, hotfix, release, development, feature branch etc.
+
 
 ##Github
 - <http://github.com> is an awesome site that allows people to share code, projects and colloborate easily using git.
@@ -122,5 +132,7 @@ Remember, an empty commit message aborts the commit. Also the best way to commit
 * [Git beginner tutes](http://sixrevisions.com/resources/git-tutorials-beginners/)
 * [Git for Computer Scientists](http://eagain.net/articles/git-for-computer-scientists/) 
 * [Git from bottom up](http://ftp.newartisans.com/pub/git.from.bottom.up.pdf)
-* <http://learn.github.com/p/intro.html> - contains video tutorials on how to use git.
-* There is this book : Pragmatic Version Control , Using Git. you could download it from <library.nu>
+* [Git Video Tutorials by Github](http://learn.github.com/p/intro.html)
+* [Pragmatic Version Control using Git](http://pragprog.com/book/tsgit/pragmatic-version-control-using-git)
+* [Why Git is Better than X](http://whygitisbetterthanx.com/) - Replace X with any VCS
+* [A successful Git branching Model](http://nvie.com/posts/a-successful-git-branching-model/)

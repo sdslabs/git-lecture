@@ -1,4 +1,4 @@
-<h1>Git Lecture Notes</h1>
+<p>M#Git Lecture Notes</p>
 <h2>Topics Discussed</h2>
 <ul>
 <li>SSH, public key authentication.</li>
@@ -52,7 +52,12 @@
 <li><code>blob</code> is the internal representation of files in git</li>
 <li><code>index</code> is a staging area for the commit in progress</li>
 </ul>
-<h2>Git workflow</h2>
+<h2>Git Workflow</h2>
+<h3>Fork, Merge, Pull</h3>
+<p>This is what Github follows. People create their own fork version of the repo, and send back pull requests</p>
+<h3>Shared Repository</h3>
+<p>A single repository shared among various people can be used successfully if the project is closed, and has known developers This is mainly for <a href="github.com/sdslabs">organizations</a></p>
+<h3>Branching Model</h3>
 <p>Mainly from <a href="http://nvie.com/posts/a-successful-git-branching-model/">here</a><br />Topics include branches, stable, hotfix, release, development, feature branch etc.</p>
 <h2>Github</h2>
 <ul>
@@ -63,6 +68,7 @@
 <li>Setting <code>remotes</code></li>
 <li><code>push</code>, <code>pull</code>, <code>fetch</code>, <code>merge</code></li>
 <li>Github gem</li>
+<li>Online Editing as well (press <code>e</code> on a file)</li>
 </ul>
 <h2>Some other things</h2>
 <ul>
@@ -79,6 +85,7 @@
 <li><code>git config user.name</code> and <code>git config user.email</code> should be setup</li>
 <li>Pass along the public keys (via email)</li>
 </ul>
+<p>-</p>
 <h2>Commit Messages Editing</h2>
 <p>When you make commits on git, it uses your default text editors to type the commit message. This is set to <code>vim</code> in Windows and Linux. Linux folks can change it to anything else by setting the $EDITOR variable by the following command: <code>export EDITOR=nano</code> (Replace nano with the editor of your choice like gedit geany etc)</p>
 <p>You can also save the setting in your git global configuration, by : <code>git config --global core.editor &quot;nano&quot;</code></p>
@@ -91,8 +98,6 @@
 <p><code>git commit -m &quot;Commit Message Here&quot;</code> to just type the commit message on the command line, and leave out all the hassle of the editor</p>
 <h1>Resources on Git</h1>
 <ul>
-<li><a href="http://whygitisbetterthanx.com/">Why Git is Better than X</a></li>
-<li><a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching Model</a></li>
 <li><a href="http://help.github.com/git-cheat-sheets/">Git Cheat Sheets &amp; Excellent starting guide</a></li>
 <li><a href="http://www.kernel.org/pub/software/scm/git/docs/everyday.html">Everyday GIT With 20 Commands Or So</a></li>
 <li><a href="http://progit.org/book/">Pro Git Book</a></li>
@@ -103,6 +108,8 @@
 <li><a href="http://sixrevisions.com/resources/git-tutorials-beginners/">Git beginner tutes</a></li>
 <li><a href="http://eagain.net/articles/git-for-computer-scientists/">Git for Computer Scientists</a></li>
 <li><a href="http://ftp.newartisans.com/pub/git.from.bottom.up.pdf">Git from bottom up</a></li>
-<li><a href="http://learn.github.com/p/intro.html">http://learn.github.com/p/intro.html</a> - contains video tutorials on how to use git.</li>
-<li>There is this book : Pragmatic Version Control , Using Git. you could download it from <library.nu></li>
+<li><a href="http://learn.github.com/p/intro.html">Git Video Tutorials by Github</a></li>
+<li><a href="http://pragprog.com/book/tsgit/pragmatic-version-control-using-git">Pragmatic Version Control using Git</a></li>
+<li><a href="http://whygitisbetterthanx.com/">Why Git is Better than X</a> - Replace X with any VCS</li>
+<li><a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching Model</a></li>
 </ul>
