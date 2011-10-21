@@ -5,3 +5,6 @@ These are the notes from a Git introductory lecture at [SDSLabs](github.com/sdsl
 In case you'd like to contribute to these notes, please edit the markdown file, not the html, and send back a pull request.
 
 The html file is generated periodically by `hsmarkdown`.
+---
+Git Lecture notes @SDSLabs
+Last Updated Oct 2011

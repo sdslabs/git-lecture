@@ -35,16 +35,24 @@ The server needs your public key to authenticate the connection.
 This is just a simple walkthrough. You are encouraged to try out these steps on your own.
 
 - `git init` creates a new repository
+- `git clone <url> [folder]`clones a repo from the server
 - `git add <filename>` adds files to index
 - `git add .` adds everything to index
 - `git commit` creates a commit
 - `git commit -a` adds all *modified* files to the index and starts a commit
 - A blank commit message aborts the commit
-- `git checkout <??>` changes your working directory to a commit/tag/branch
+- `git checkout <ref>` changes your working directory to a commit/tag/branch
 - `git checkout -b branchname` creates a new branch and shifts to it
 - `git branch` shows a list of all branches & the current branch
+- `git branch <branch>` creates a new branch, but does not switch to it
 - `git merge branchname` merges the branch with the current branch
 - `git tag` marks a tag for the current commit
+
+###A Little More
+- `git pull [remote] [ref]` fetches and merges the branch/commit with the current HEAD
+- `git fetch [remote] [ref]` fetches the commits for merging
+- Therefore, `pull` = `fetch` + `merge`
+- Similarly, `checkout -b` = `branch` + `checkout` //Create and checkout 
 
 ##Little of git-jargon
 Read more over [here](http://book.git-scm.com/7_glossary.html)
@@ -78,7 +86,7 @@ Topics include branches, stable, hotfix, release, development, feature branch et
 - Creating repository
 - Setting `remotes`
 - `push`, `pull`, `fetch`, `merge`
-- Github gem
+- [Github gem](https://github.com/defunkt/github-gem)
 - Online Editing as well (press `e` on a file)
 
 ##Some other things
@@ -90,10 +98,10 @@ Topics include branches, stable, hotfix, release, development, feature branch et
 - `.gitignore` file to store system specific stuff (configuration, databases, temp files, cache, build)
 
 ##Redmine
-- Create user accounts
+- Create user accounts (Registration)
 - `git config user.name` and `git config user.email` should be setup
 - Pass along the public keys (via email)
-- 
+
 
 ##Commit Messages Editing
 When you make commits on git, it uses your default text editors to type the commit message. This is set to `vim` in Windows and Linux. Linux folks can change it to anything else by setting the $EDITOR variable by the following command:
