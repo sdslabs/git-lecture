@@ -112,15 +112,17 @@ Take care about the slashes, and the path to your editor of choice. Don't use no
 If you're stuck with vim for some reason, do the following in the commit window
 
 1. Press `i` to go to insert mode
-1. Type your commit message
-1. Press `Esc`
-1. Type `:wq`. The colon is important
-1. Press `Enter`
-1. That's it, your commit should be successful
+2. Type your commit message
+3. Press `Esc`
+4. Type `:wq`. The colon is important
+5. Press `Enter`
+6. That's it, your commit should be successful
 
 Remember, an empty commit message aborts the commit. Also the best way to commit easily is:
 
 `git commit -m "Commit Message Here"` to just type the commit message on the command line, and leave out all the hassle of the editor
+
+To learn how to use vim effectively, type 'vimtutor' in terminal.
 
 #Resources on Git
 * [Git for beginners: the definitive practical guide] (http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide)
