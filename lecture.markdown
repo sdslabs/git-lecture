@@ -123,6 +123,7 @@ Remember, an empty commit message aborts the commit. Also the best way to commit
 `git commit -m "Commit Message Here"` to just type the commit message on the command line, and leave out all the hassle of the editor
 
 #Resources on Git
+* [Git for beginners: the definitive practical guide] (http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide)
 * [Git Cheat Sheets & Excellent starting guide](http://help.github.com/git-cheat-sheets/)
 * [Everyday GIT With 20 Commands Or So](http://www.kernel.org/pub/software/scm/git/docs/everyday.html)
 * [Pro Git Book](http://progit.org/book/)
