@@ -72,12 +72,11 @@ This is what Github follows. People create their own fork version of the repo, a
 
 ###Shared Repository
 A single repository shared among various people can be used successfully if the project is closed, and has known developers
-This is mainly for [organizations](github.com/sdslabs)
+This is mainly for [organizations](github.com/sdslabs) and trusted developers
 
 ###Branching Model
 Mainly from [here](http://nvie.com/posts/a-successful-git-branching-model/)  
 Topics include branches, stable, hotfix, release, development, feature branch etc.
-
 
 ##Github
 - <http://github.com> is an awesome site that allows people to share code, projects and colloborate easily using git.
@@ -90,18 +89,24 @@ Topics include branches, stable, hotfix, release, development, feature branch et
 - Online Editing as well (press `e` on a file)
 
 ##Some other things
+
+A few more git commands
+
 - `git log` allows you to see your history
 - `git log --oneline` gives single line history
 - `git log --pretty` gives better output
 - `git log --graph` shows your commit graph
-- Git GUI Systems - `gitg`, `git-cola`, `qgit`, `giggle` and the windows git-gui as well.
+- Git GUI Systems - `gitg`, `git-cola`, `qgit`, `giggle` and the windows git-gui as 
+- Mac - [Gitbox](http://gitboxapp.com/), [SourceTree](http://www.sourcetreeapp.com/), [Github for Mac](http://mac.github.com/)
 - `.gitignore` file to store system specific stuff (configuration, databases, temp files, cache, build)
+- `tig` is an awesome commit browser that runs on the command line.
+
+To install any of the packages mentioned above, just run `sudo apt-get install package` in ubuntu.
 
 ##Redmine
 - Create user accounts (Registration)
 - `git config user.name` and `git config user.email` should be setup
 - Pass along the public keys (via email)
-
 
 ##Commit Messages Editing
 When you make commits on git, it uses your default text editors to type the commit message. This is set to `vim` in Windows and Linux. Linux folks can change it to anything else by setting the $EDITOR variable by the following command:
@@ -130,6 +135,17 @@ Remember, an empty commit message aborts the commit. Also the best way to commit
 
 `git commit -m "Commit Message Here"` to just type the commit message on the command line, and leave out all the hassle of the editor
 
+##Faster Git Resources
+
+Git allows you to defined aliases for certain commands. These faster ways of using git create several additional commands for git, such as `git release`, and `ga` etc
+
+- [SCM Breeze](http://madebynathan.com/2011/10/18/git-shortcuts-like-youve-never-seen-before/) #awesome
+- [Git Extras](https://github.com/visionmedia/git-extras)
+- [Git Aligned Logs](http://pyrtsa.posterous.com/aligning-your-git-logs)
+- [Git-Number](https://github.com/holygeek/git-number) - Similar to SCM Breeze
+
+Also see `tig`, which is a cli repo browser for git.
+
 #Resources on Git
 * [Git Cheat Sheets & Excellent starting guide](http://help.github.com/git-cheat-sheets/)
 * [Everyday GIT With 20 Commands Or So](http://www.kernel.org/pub/software/scm/git/docs/everyday.html)
@@ -144,4 +160,4 @@ Remember, an empty commit message aborts the commit. Also the best way to commit
 * [Git Video Tutorials by Github](http://learn.github.com/p/intro.html)
 * [Pragmatic Version Control using Git](http://pragprog.com/book/tsgit/pragmatic-version-control-using-git)
 * [Why Git is Better than X](http://whygitisbetterthanx.com/) - Replace X with any VCS
-* [A successful Git branching Model](http://nvie.com/posts/a-successful-git-branching-model/)
+* [A successful Git branching Model](http://nvie.com/posts/a-successful-git-branching-model/) #mustread
