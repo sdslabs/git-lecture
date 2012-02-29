@@ -1,5 +1,80 @@
-<p>M#Git Lecture Notes</p>
-<h2>Topics Discussed</h2>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style>
+  * {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+  body {
+      max-width: 50em;
+      margin: 0 auto;
+      color: #111;
+  }
+  
+  pre, code {
+      font-family: Monaco, Courier New, monospace;
+      font-size: 11px;
+  }
+  
+  h1 {
+      font-size: 45px;
+      font-weight: 100;
+      letter-spacing: -1px;
+      margin-bottom: -5px;
+  }
+  h1 code {
+      font-size: 40px;
+  }
+  
+  h2 {
+      color: rgb(43,105,145);
+      font-weight: bold;
+      margin-bottom: -5px;
+  }
+  h2 code {
+      font-size: 22px;
+  }
+  
+  h3 {
+      margin-bottom: -5px;
+  }
+  h3 code {
+      font-size: 16px;
+  }
+  
+  a {
+      color: blue;
+      text-decoration: none;
+  }
+  a:visited {
+      color: navy;
+  }
+  a:hover {
+      text-decoration: underline;
+  }
+  
+  pre {
+      border-width: 1px;
+      border-color: #777;
+      border-style: solid;
+      padding: 0.5em;
+      background-color: #111;
+      overflow: auto;
+      color: #CCC;
+  }
+  
+  p, li {
+      font-size: 13px;
+      line-height: 18px;
+  }
+  </style>
+</head>
+<body>
+<h1 id="git-lecture-notes">Git Lecture Notes</h1>
+<h2 id="topics-discussed">Topics Discussed</h2>
 <ul>
 <li>SSH, public key authentication.</li>
 <li>Version Control</li>
@@ -9,14 +84,14 @@
 <li>Extra git commands</li>
 <li>Git GUI's</li>
 </ul>
-<h2>SSH</h2>
-<h3>Installing ssh</h3>
+<h2 id="ssh">SSH</h2>
+<h3 id="installing-ssh">Installing ssh</h3>
 <p><code>sudo apt-get install openssh</code></p>
-<h3>Connecting to server</h3>
+<h3 id="connecting-to-server">Connecting to server</h3>
 <p><code>$ ssh username@hostname</code></p>
-<h3>Public key authentication</h3>
+<h3 id="public-key-authentication">Public key authentication</h3>
 <p><code>ssh-keygen -t rsa</code> The private key is at <code>~/.ssh/id_rsa</code> while the private key is at <code>~/.ssh/id_rsa.pub</code> The server needs your public key to authenticate the connection.</p>
-<h2>Version Control</h2>
+<h2 id="version-control">Version Control</h2>
 <ul>
 <li>central VCS v/s Distributed VCS</li>
 <li>Why Version Control</li>
@@ -26,22 +101,31 @@
 <li>Any bugs introduced can be traced back to the code that made it</li>
 <li>Examples : svn, cvs, mercurial, bzr, etc</li>
 </ul>
-<h2>Git Basics</h2>
+<h2 id="git-basics">Git Basics</h2>
 <p>This is just a simple walkthrough. You are encouraged to try out these steps on your own.</p>
 <ul>
 <li><code>git init</code> creates a new repository</li>
+<li><code>git clone &lt;url&gt; [folder]</code>clones a repo from the server</li>
 <li><code>git add &lt;filename&gt;</code> adds files to index</li>
 <li><code>git add .</code> adds everything to index</li>
 <li><code>git commit</code> creates a commit</li>
 <li><code>git commit -a</code> adds all <em>modified</em> files to the index and starts a commit</li>
 <li>A blank commit message aborts the commit</li>
-<li><code>git checkout &lt;??&gt;</code> changes your working directory to a commit/tag/branch</li>
+<li><code>git checkout &lt;ref&gt;</code> changes your working directory to a commit/tag/branch</li>
 <li><code>git checkout -b branchname</code> creates a new branch and shifts to it</li>
 <li><code>git branch</code> shows a list of all branches &amp; the current branch</li>
+<li><code>git branch &lt;branch&gt;</code> creates a new branch, but does not switch to it</li>
 <li><code>git merge branchname</code> merges the branch with the current branch</li>
 <li><code>git tag</code> marks a tag for the current commit</li>
 </ul>
-<h2>Little of git-jargon</h2>
+<h3 id="a-little-more">A Little More</h3>
+<ul>
+<li><code>git pull [remote] [ref]</code> fetches and merges the branch/commit with the current HEAD</li>
+<li><code>git fetch [remote] [ref]</code> fetches the commits for merging</li>
+<li>Therefore, <code>pull</code> = <code>fetch</code> + <code>merge</code></li>
+<li>Similarly, <code>checkout -b</code> = <code>branch</code> + <code>checkout</code> //Create and checkout</li>
+</ul>
+<h2 id="little-of-git-jargon">Little of git-jargon</h2>
 <p>Read more over <a href="http://book.git-scm.com/7_glossary.html">here</a></p>
 <ul>
 <li><code>branch</code> is an active line of development.</li>
@@ -52,25 +136,25 @@
 <li><code>blob</code> is the internal representation of files in git</li>
 <li><code>index</code> is a staging area for the commit in progress</li>
 </ul>
-<h2>Git Workflow</h2>
-<h3>Fork, Merge, Pull</h3>
+<h2 id="git-workflow">Git Workflow</h2>
+<h3 id="fork-merge-pull">Fork, Merge, Pull</h3>
 <p>This is what Github follows. People create their own fork version of the repo, and send back pull requests</p>
-<h3>Shared Repository</h3>
+<h3 id="shared-repository">Shared Repository</h3>
 <p>A single repository shared among various people can be used successfully if the project is closed, and has known developers This is mainly for <a href="github.com/sdslabs">organizations</a></p>
-<h3>Branching Model</h3>
+<h3 id="branching-model">Branching Model</h3>
 <p>Mainly from <a href="http://nvie.com/posts/a-successful-git-branching-model/">here</a><br />Topics include branches, stable, hotfix, release, development, feature branch etc.</p>
-<h2>Github</h2>
+<h2 id="github">Github</h2>
 <ul>
-<li><a href="http://github.com">http://github.com</a> is an awesome site that allows people to share code, projects and colloborate easily using git.</li>
+<li><a href="http://github.com"><code class="url">http://github.com</code></a> is an awesome site that allows people to share code, projects and colloborate easily using git.</li>
 <li>Create an account</li>
 <li>Setting up ssh-keys</li>
 <li>Creating repository</li>
 <li>Setting <code>remotes</code></li>
 <li><code>push</code>, <code>pull</code>, <code>fetch</code>, <code>merge</code></li>
-<li>Github gem</li>
+<li><a href="https://github.com/defunkt/github-gem">Github gem</a></li>
 <li>Online Editing as well (press <code>e</code> on a file)</li>
 </ul>
-<h2>Some other things</h2>
+<h2 id="some-other-things">Some other things</h2>
 <ul>
 <li><code>git log</code> allows you to see your history</li>
 <li><code>git log --oneline</code> gives single line history</li>
@@ -79,22 +163,21 @@
 <li>Git GUI Systems - <code>gitg</code>, <code>git-cola</code>, <code>qgit</code>, <code>giggle</code> and the windows git-gui as well.</li>
 <li><code>.gitignore</code> file to store system specific stuff (configuration, databases, temp files, cache, build)</li>
 </ul>
-<h2>Redmine</h2>
+<h2 id="redmine">Redmine</h2>
 <ul>
-<li>Create user accounts</li>
+<li>Create user accounts (Registration)</li>
 <li><code>git config user.name</code> and <code>git config user.email</code> should be setup</li>
 <li>Pass along the public keys (via email)</li>
 </ul>
-<p>-</p>
-<h2>Commit Messages Editing</h2>
+<h2 id="commit-messages-editing">Commit Messages Editing</h2>
 <p>When you make commits on git, it uses your default text editors to type the commit message. This is set to <code>vim</code> in Windows and Linux. Linux folks can change it to anything else by setting the $EDITOR variable by the following command: <code>export EDITOR=nano</code> (Replace nano with the editor of your choice like gedit geany etc)</p>
 <p>You can also save the setting in your git global configuration, by : <code>git config --global core.editor &quot;nano&quot;</code></p>
 <p>As per <a href="http://stackoverflow.com/questions/10564/how-can-i-set-up-an-editor-to-work-with-git-on-windows">this question on SO</a>, you can use Notepad++, or notepad etc on git on Windows as well.</p>
 <p><code>git config --global core.editor &quot;'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin&quot;</code></p>
 <p>Take care about the slashes, and the path to your editor of choice. Don't use notepad, it screws with the newlines.</p>
-<h3>Vim</h3>
+<h3 id="vim">Vim</h3>
 <p>If you're stuck with vim for some reason, do the following in the commit window</p>
-<ol>
+<ol style="list-style-type: decimal">
 <li>Press <code>i</code> to go to insert mode</li>
 <li>Type your commit message</li>
 <li>Press <code>Esc</code></li>
@@ -104,7 +187,7 @@
 </ol>
 <p>Remember, an empty commit message aborts the commit. Also the best way to commit easily is:</p>
 <p><code>git commit -m &quot;Commit Message Here&quot;</code> to just type the commit message on the command line, and leave out all the hassle of the editor</p>
-<h1>Resources on Git</h1>
+<h1 id="resources-on-git">Resources on Git</h1>
 <ul>
 <li><a href="http://help.github.com/git-cheat-sheets/">Git Cheat Sheets &amp; Excellent starting guide</a></li>
 <li><a href="http://www.kernel.org/pub/software/scm/git/docs/everyday.html">Everyday GIT With 20 Commands Or So</a></li>
@@ -121,3 +204,5 @@
 <li><a href="http://whygitisbetterthanx.com/">Why Git is Better than X</a> - Replace X with any VCS</li>
 <li><a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching Model</a></li>
 </ul>
+</body>
+</html>
