@@ -2,14 +2,11 @@
 
 These are the notes from a Git introductory lecture at [SDSLabs](github.com/sdslabs). Attendees were expected to create an account on github, fork this repository, and submit a pull request as a basic beginning into git.
 
-In case you'd like to contribute to these notes, please edit the markdown file, not the html, and send back a pull request.
+In case you'd like to contribute to these notes, please edit index.md, and send back a pull request.
 
-The html file is generated periodically by `pandoc`.
-
-To regenerate the html file, install pandoc (`sudo apt-get install pandoc`) and run the following command:
-
-    pandoc -H style.css lecture.markdown -o lecture.html
+The html file is generated automatically  by `Github Pages` on pushing to the gh-pages branch.
+An HTML Version of this is available at <http://blog.sdslabs.co/git-lecture/>
 
 ---
 Git Lecture notes @SDSLabs
-Last Updated Feb 29, 2012
+Last Updated Jan 24, 2013
