@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 #Git Lecture Notes
 
 ##Topics Discussed
@@ -19,7 +23,7 @@
 
 ###Public key authentication
 `ssh-keygen -t rsa`
-The private key is at `~/.ssh/id_rsa` while the private key is at `~/.ssh/id_rsa.pub`
+The private key is at `~/.ssh/id_rsa` while the public key is at `~/.ssh/id_rsa.pub`
 The server needs your public key to authenticate the connection.
 
 ##Version Control
@@ -79,7 +83,7 @@ Mainly from [here](http://nvie.com/posts/a-successful-git-branching-model/)
 Topics include branches, stable, hotfix, release, development, feature branch etc.
 
 ##Github
-- <http://github.com> is an awesome site that allows people to share code, projects and colloborate easily using git.
+- <http://github.com> is an awesome site that allows people to share code, projects and collaborate easily using git.
 - Create an account
 - Setting up ssh-keys
 - Creating repository
