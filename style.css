@@ -1,6 +1,5 @@
-<style>
 * {
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body {
     max-width: 50em;
@@ -64,4 +63,3 @@ p, li {
     font-size: 13px;
     line-height: 18px;
 }
-</style>
